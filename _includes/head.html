@@ -1,0 +1,55 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% seo %}
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" | relative_url }}">
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" | relative_url }}"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" | relative_url }}">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- RSS -->
+  {% feed_meta %}
+
+  <!-- Google Analytics-->
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/fe096f565e.js" crossorigin="anonymous"></script>
+
+  <!-- Firebase -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyD2VqrZAJnqSjqPpOj_fQ_S3_G4uKgVhsE",
+      authDomain: "hiddenwork-4d996.firebaseapp.com",
+      databaseURL: "https://hiddenwork-4d996-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "hiddenwork-4d996",
+      storageBucket: "hiddenwork-4d996.appspot.com",
+      messagingSenderId: "621038404700",
+      appId: "1:621038404700:web:f12037e372883b40edd299"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var database = firebase.database();
+  </script>
+
+  <script src="assets/js/counts.js"></script>
+</head>

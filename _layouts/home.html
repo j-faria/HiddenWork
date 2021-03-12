@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="catalogue">
+  {% for post in paginator.posts %}
+    {%- assign postID = post.id | replace_first: "/", "" | replace: "/", "-" -%}
+    <div class="catalogue-item">
+      <div>
+        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        {{ post.content }}
+      </div>
+    </div>
+    <script>getBTDT("{{ postID }}")</script>
+    <button type="button" onclick="setBTDT('{{ postID }}')">
+      <span style="color: red;"><i class="fas fa-heart"></i></span>
+      <span id="{{ postID }}-btdt">BTDT</span>
+    </button>
+
+    <script>getTIHI("{{ postID }}")</script>
+    <button type="button" onclick="setTIHI('{{ postID }}')">
+      <span style="color: blue;"><i class="fas fa-thumbs-down"></i></span>
+      <span id="{{ postID }}-tihi">TIHI</span>
+    </button> 
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  {% endif %}
+
+  <!-- <span>{{ paginator.page }}</span> -->
+</div>
+
