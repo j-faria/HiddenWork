@@ -266,7 +266,7 @@ footer { font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book An
 
 footer span { color: #555; font-size: .8rem; }
 
-.pagination { border-top: 0.5px solid #e5e5e5; font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif; padding-top: 2rem; position: relative; text-align: center; }
+.pagination { font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif; padding-top: 2rem; position: relative; text-align: center; }
 
 .pagination span { color: #353535; font-size: 1.1rem; }
 
@@ -282,17 +282,15 @@ footer span { color: #555; font-size: .8rem; }
 
 .pagination .right { right: 0; }
 
-.catalogue-item { border-bottom: 1px solid #e5e5e5; color: #555; display: block; padding: 2rem 0; }
+.catalogue { border-bottom: 1px solid white; }
 
-.catalogue-item:hover .catalogue-line, .catalogue-item:focus .catalogue-line { width: 5rem; }
+.catalogue button { float: right; margin-top: -10px; padding: 3px 10px; border-radius: 6px; text-align: center; text-decoration: none; font-size: 14px; }
 
-.catalogue-item:last-child { border: 0; }
+.catalogue-item { border-bottom: 1px solid #e5e5e5; color: #555; display: block; padding: 2rem 0 0; }
 
 .catalogue-time { color: #aaa; font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", "Georgia", serif; letter-spacing: .5px; }
 
 .catalogue-title { color: #353535; display: block; font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif; font-size: 2rem; font-weight: 700; margin: .5rem 0; }
-
-.catalogue-line { -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; transition: all 0.3s ease-out; border-top: 0.2rem solid #353535; display: block; width: 2rem; }
 
 .notfound { position: relative; text-align: center; margin: 4rem 0; }
 
