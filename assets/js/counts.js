@@ -31,7 +31,7 @@ function getTIHI(postId) {
     var ref = database.ref(postId + '/tihi');
     ref.on('value', (snapshot) => {
       const data = snapshot.val();
-      if (data == 0) {
+      if (data == 0 | data == null) {
         document.getElementById(postId + '-tihi').innerHTML = `TIHI`;
       }
       else {
